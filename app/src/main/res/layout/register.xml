@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <android.support.v7.widget.Toolbar
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/toolbarRegister"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <!-- everything you already have -->
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50px"
+                android:text="ลงทะเบียนเข้าใช้งาน"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="บัญชีผู้ใช้งาน"
+                android:layout_gravity="left"
+                android:layout_marginTop="10px"
+                android:layout_marginLeft="10px"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            <EditText
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_margin="10px"
+                android:layout_marginLeft="10px"
+                android:ems="10"
+                android:hint="บัญชีผู้ใช้งาน"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="รหัสผ่าน"
+                android:inputType="textPassword"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtConPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="กรุณาพิมพ์รหัสผ่านอีกครั้ง"
+                android:inputType="textPassword"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtFname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="ชื่อ"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtLname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="นามสกุล"
+                android:textColor="#0000CC" />
+
+
+            <EditText
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="ที่อยู่"
+                android:textColor="#0000CC" />
+
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="อีเมลล์"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtCiziten_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="หมายเลขบัตรประจำตัวประชาชน"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtDriver_license_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="เลขที่ใบขับขี่"
+                android:textColor="#0000CC" />
+
+            <EditText
+                android:id="@+id/txtTel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10px"
+                android:ems="10"
+                android:hint="เบอร์โทรศัพท์"
+                android:textColor="#0000CC" />
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:background="@color/colorPrimary"
+                android:ems="15"
+                android:text="ลงทะเบียน"
+                android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:background="@color/colorPrimary"
+                android:ems="15"
+                android:text="ย้อนกลับ"
+                android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+

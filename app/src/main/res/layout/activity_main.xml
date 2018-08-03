@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+
+
+    <ImageView
+        android:layout_width="182dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/logo"
+         />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="ยินดีต้อนรับเข้าสู่ระบบ TPS Car Rental"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+
+    <Button
+        android:id="@+id/gotoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:ems="15"
+        android:text="เข้าสู่ระบบผู้ใช้งาน"
+        android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+    <Button
+        android:id="@+id/goto_Login_Admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:ems="15"
+        android:text="เข้าสู่ระบบผู้ดูแลระบบ"
+        android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+    <Button
+        android:id="@+id/gotoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:ems="15"
+        android:text="ลงทะเบียน"
+        android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+
+    <Button
+        android:id="@+id/exitApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:ems="15"
+        android:text="ออกจากแอพลิเคชั่น"
+        android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+</LinearLayout>
+
+
+
