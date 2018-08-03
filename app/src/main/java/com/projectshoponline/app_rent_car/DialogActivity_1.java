@@ -65,6 +65,8 @@ public class DialogActivity_1 extends Activity implements View.OnClickListener {
     TextView tv_product_amount;
 
     private String driverIdString;
+    private double[] pointLatDoubles = new double[2];
+    private double[] pointLngDoubles = new double[2];
 
 
 
@@ -215,6 +217,37 @@ public class DialogActivity_1 extends Activity implements View.OnClickListener {
 //            }
 //        });
 
+    }   // Main Method
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Log.d("3AugV1", "requestCode ==> " + requestCode);
+        if (requestCode == 500) {
+
+            pointLatDoubles = data.getDoubleArrayExtra("Lat");
+            pointLngDoubles = data.getDoubleArrayExtra("Lng");
+
+            Log.d("3AugV1", "latStat ==> " + pointLatDoubles[0]);
+
+            TextView startTextView = findViewById(R.id.txtStart);
+            TextView endTextView = findViewById(R.id.txtEnd);
+
+            startTextView.setText(mySetUpText(pointLatDoubles[0], pointLngDoubles[0]));
+            endTextView.setText(mySetUpText(pointLatDoubles[1], pointLngDoubles[1]));
+
+        }
+
+    }
+
+    private String mySetUpText(double pointLatDouble, double pointLngDouble) {
+
+        String latString = String.format("%.3f", pointLatDouble);
+        String lngString = String.format("%.3f", pointLngDouble);
+        String result = "(" + latString + ", " + lngString + ")";
+
+        return result;
     }
 
     private void mapController() {

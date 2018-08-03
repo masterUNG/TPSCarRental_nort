@@ -1,6 +1,8 @@
 package com.projectshoponline.app_rent_car;
 
 import android.Manifest;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
@@ -9,12 +11,17 @@ import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -24,6 +31,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationManager locationManager;
     private Criteria criteria;
     private double latADouble, lngADouble;
+    private int time = 0;
+    private double[] pointLatDoubles = new double[2];
+    private double[] pointLntDoubles = new double[2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,24 +169,104 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
 
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-                createMarker(latLng);
-            }
-        });
+        mapController();
 
+//        Clear Controller
+        clearController();
+
+//        Confirm Controller
+        confirmController();
 
     }   // onMapReady
 
-    private void createMarker(LatLng latLng) {
-        createIconOnMap(latLng);
+    private void confirmController() {
+        Button button = findViewById(R.id.btnConfirm);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (time >= 2) {
+//                    Confirm
+                    showAlert();
+                } else {
+                    Toast.makeText(MapsActivity.this, "Please Point Start and End",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+    }
+
+    private void showAlert() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.ic_action_end);
+        builder.setTitle("Confirm Point");
+        builder.setMessage("Are You Sure ?");
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(MapsActivity.this, DialogActivity_1.class);
+                intent.putExtra("Lat", pointLatDoubles);
+                intent.putExtra("Lng", pointLntDoubles);
+                setResult(500, intent);
+                finish();
+                dialogInterface.dismiss();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        builder.show();
+
+
 
     }
 
-    private void createIconOnMap(LatLng latLng) {
+    private void clearController() {
+        Button button = findViewById(R.id.btnClear);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                time = 0;
+                mMap.clear();
+            }
+        });
+    }
+
+    private void mapController() {
+
+        final int[] ints = new int[]{R.drawable.ic_action_start, R.drawable.ic_action_end};
+
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+
+                if (time <= 1) {
+                    createMarker(latLng, ints[time]);
+                }
+
+                time += 1;
+
+            }
+        });
+    }
+
+    private void createMarker(LatLng latLng, int intIcon) {
         MarkerOptions markerOptions = new MarkerOptions()
-                .position(latLng);
+                .position(latLng)
+                .icon(BitmapDescriptorFactory.fromResource(intIcon));
         mMap.addMarker(markerOptions);
+
+        pointLatDoubles[time] = latLng.latitude;
+        pointLntDoubles[time] = latLng.longitude;
+
     }
+
+
 }
