@@ -4,6 +4,7 @@
     android:fillViewport="true">
 
     <LinearLayout
+        android:background="@drawable/bg_clear"
         android:id="@+id/mainLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -58,10 +59,7 @@
             android:id="@+id/b_Show_Category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
-            android:ems="15"
+            android:background="@drawable/bg_button"
             android:text="รถที่พร้อมให้บริการ"
             android:textAppearance="@android:style/TextAppearance.Inverse" />
 
@@ -69,10 +67,7 @@
             android:id="@+id/b_Add_Car"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
-            android:ems="15"
+            android:background="@drawable/bg_button"
             android:text="เพิ่มรถ"
             android:textAppearance="@android:style/TextAppearance.Inverse" />
 
@@ -80,21 +75,23 @@
             android:id="@+id/b_Show_Order_All"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
-            android:ems="15"
+            android:background="@drawable/bg_button"
             android:text="จัดการรายการจอง"
+            android:textAppearance="@android:style/TextAppearance.Inverse" />
+
+        <Button
+            android:id="@+id/btnReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:text="ออกรายงาน"
             android:textAppearance="@android:style/TextAppearance.Inverse" />
 
         <Button
             android:id="@+id/Logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
-            android:ems="15"
+            android:background="@drawable/bg_button"
             android:text="ออกจากระบบ"
             android:textAppearance="@android:style/TextAppearance.Inverse" />
 
@@ -102,10 +99,7 @@
             android:id="@+id/exitApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
-            android:ems="15"
+            android:background="@drawable/bg_button"
             android:text="ออกจากแอพลิเคชั่น"
             android:textAppearance="@android:style/TextAppearance.Inverse" />
 

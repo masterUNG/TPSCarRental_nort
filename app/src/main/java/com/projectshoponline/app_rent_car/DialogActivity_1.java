@@ -375,6 +375,10 @@ public class DialogActivity_1 extends Activity implements View.OnClickListener {
 
                     data.add(new BasicNameValuePair("dataname7", strMemberID));
                     data.add(new BasicNameValuePair("dataname8", driverIdString));
+                    data.add(new BasicNameValuePair("dataname9", Double.toString(pointLatDoubles[0])));
+                    data.add(new BasicNameValuePair("dataname10", Double.toString(pointLngDoubles[0])));
+                    data.add(new BasicNameValuePair("dataname11", Double.toString(pointLatDoubles[1])));
+                    data.add(new BasicNameValuePair("dataname12", Double.toString(pointLngDoubles[1])));
                     poster.doPost(data, new Handler() {
                         public void handleMessage(android.os.Message msg) {
                             switch (msg.what) {
