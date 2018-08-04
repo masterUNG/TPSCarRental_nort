@@ -31,31 +31,66 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Page_Menu" />
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
-        <activity android:name=".My_Profile" />
-        <activity android:name=".Show_Category" />
-        <activity android:name=".Show_All" />
-        <activity android:name=".Show_Detail" />
-        <activity android:name=".Show_Detail_And_Rent" />
-        <activity android:name=".Page_Order" />
-        <activity android:name=".Login_Admin" />
-        <activity android:name=".Page_Menu_Admin" />
-        <activity android:name=".Add_Car" />
-        <activity android:name=".Page_Spinner_Category" />
-        <activity android:name=".Show_Category_Admin" />
-        <activity android:name=".Show_All_Admin" />
-        <activity android:name=".Show_Order_All" />
+        <activity
+            android:name=".Page_Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".My_Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_All"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_Detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_Detail_And_Rent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Page_Order"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login_Admin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Page_Menu_Admin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Add_Car"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Page_Spinner_Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_Category_Admin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_All_Admin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Show_Order_All"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DialogActivity_1"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.Dialog" />
 
         <!--
@@ -72,9 +107,17 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
-        <activity android:name=".ReportActivity" />
-        <activity android:name=".ListRentCarActivity" android:screenOrientation="landscape"/>
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListRentCarActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ListCountCarActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

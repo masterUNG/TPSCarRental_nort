@@ -14,9 +14,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
-    <!--Name and Surname-->
+    <!--Order Product Name-->
     <TextView
-        android:id="@+id/txtNameAndSur"
+        android:id="@+id/txtProductName"
         android:gravity="center_horizontal"
         android:textSize="18sp"
         android:text="Name Surname"
@@ -24,34 +24,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
-    <!--Product Name-->
+    <!--Count-->
     <TextView
-        android:id="@+id/txtProductName"
+        android:id="@+id/txtCount"
         android:gravity="center_horizontal"
         android:textSize="18sp"
         android:text="Product Name"
-        android:layout_weight="5"
+        android:layout_weight="2"
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
-    <!--Start Date-->
-    <TextView
-        android:id="@+id/txtStart"
-        android:gravity="center_horizontal"
-        android:textSize="18sp"
-        android:text="2018-04-05"
-        android:layout_weight="3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
 
-    <!--Product Amount-->
-    <TextView
-        android:id="@+id/txtAmount"
-        android:gravity="center_horizontal"
-        android:textSize="18sp"
-        android:text="12"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -13,12 +13,12 @@
 
         <!--Toolbar-->
         <include
-            android:id="@+id/toolbarListRentCar"
+            android:id="@+id/toolbarListCountCar"
             layout="@layout/toolbar_main" />
 
         <!--Head-->
         <LinearLayout
-            android:layout_below="@+id/toolbarListRentCar"
+            android:layout_below="@+id/toolbarListCountCar"
             android:id="@+id/linearHead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,59 +36,38 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!--Name and Surname-->
+            <!--Order Product Name-->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:gravity="center_horizontal"
-                android:text="Name"
+                android:text="Product Name"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!--Product Name-->
+            <!--Count-->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:gravity="center_horizontal"
-                android:text="Product"
+                android:text="Count"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!--Start Date-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:gravity="center_horizontal"
-                android:text="Start"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!--Product Amount-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:gravity="center_horizontal"
-                android:text="Amount"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
         </LinearLayout>
 
         <!--Content-->
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewDataRentCar"
+            android:id="@+id/recyclerViewCountCar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/linearFoot"
-            android:layout_below="@+id/linearHead"></android.support.v7.widget.RecyclerView>
+            android:layout_below="@+id/linearHead"/>
 
 
         <!--Foot-->

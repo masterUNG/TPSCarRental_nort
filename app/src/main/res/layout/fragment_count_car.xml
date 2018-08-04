@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Toolbar-->
+    <include
+        android:id="@+id/toolbarCountCar"
+        layout="@layout/toolbar_main" />
+
+    <!--Choose Date-->
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_clear"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtShowStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal"
+                android:text="Start Date"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h1"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSetStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="Set Start"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <!--End-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtShowEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal"
+                android:text="End Date"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h1"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSetEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="Set End"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <!--Update-->
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:text="Update"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

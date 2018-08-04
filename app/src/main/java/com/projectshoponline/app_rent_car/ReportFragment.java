@@ -21,8 +21,27 @@ public class ReportFragment extends Fragment {
 //        DataRentCar Controller
         dataRentCarController();
 
+//        CountCar Controller
+        countCarController();
 
     }   // Main Method
+
+    private void countCarController() {
+        Button button = getView().findViewById(R.id.btnCountCar);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentReportFragment, new CountCarFragment())
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+    }
 
     private void dataRentCarController() {
         Button button = getView().findViewById(R.id.btnDataRentCar);

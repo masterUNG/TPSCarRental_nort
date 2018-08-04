@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DataRentCarAdapter extends RecyclerView.Adapter<DataRentCarAdapter.DataRentCarViewHolder> {
 
@@ -16,19 +17,14 @@ public class DataRentCarAdapter extends RecyclerView.Adapter<DataRentCarAdapter.
             productNameStringArrayList, startDateStringArrayList, amountStringArrayList;
     private LayoutInflater layoutInflater;
 
-    public DataRentCarAdapter(Context context,
-                              ArrayList<String> itemStringArrayList,
-                              ArrayList<String> nameAnSurStringArrayList,
-                              ArrayList<String> productNameStringArrayList,
-                              ArrayList<String> startDateStringArrayList,
-                              ArrayList<String> amountStringArrayList) {
+    public DataRentCarAdapter(Context context, ArrayList<String> itemStringArrayList, ArrayList<String> nameAnSurStringArrayList, ArrayList<String> productNameStringArrayList, ArrayList<String> startDateStringArrayList, ArrayList<String> amountStringArrayList) {
         this.layoutInflater = LayoutInflater.from(context);
         this.itemStringArrayList = itemStringArrayList;
         this.nameAnSurStringArrayList = nameAnSurStringArrayList;
         this.productNameStringArrayList = productNameStringArrayList;
         this.startDateStringArrayList = startDateStringArrayList;
         this.amountStringArrayList = amountStringArrayList;
-    }   // Constructor
+    }
 
     @Override
     public DataRentCarViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
