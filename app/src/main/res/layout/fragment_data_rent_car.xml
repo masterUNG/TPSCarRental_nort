@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <!--Toolbar-->
     <include
@@ -11,78 +10,82 @@
 
     <!--Choose Date-->
     <LinearLayout
-        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_clear"
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <!--Start-->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtShowStart"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
-                android:textSize="@dimen/h1"
-                android:text="Start Date"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal"
+                android:text="Start Date"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h1"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnSetStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
                 android:background="@drawable/bg_button"
                 android:text="Set Start"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:textColor="#ffffff" />
 
         </LinearLayout>
 
         <!--End-->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtShowEnd"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
-                android:textSize="@dimen/h1"
-                android:text="End Date"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal"
+                android:text="End Date"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h1"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnSetEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
                 android:background="@drawable/bg_button"
                 android:text="Set End"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:textColor="#ffffff" />
 
         </LinearLayout>
 
         <!--Update-->
         <Button
-            android:textColor="#ffffff"
-            android:text="Update"
-            android:background="@drawable/bg_button"
+            android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:text="Update"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
 
-    <!--RecycleView-->
 
-</LinearLayout>
+</RelativeLayout>
